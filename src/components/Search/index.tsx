@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Container, SearchButton, SearchInput } from './styles';
 import { getImage } from '../../../src/api/index';
+import ApiResponse from '../../interfaces/ApiResponse';
 
 export const Search = () => {
   const [inputValue, setinputValue] = useState('');
 
-  const handleSearch = () => {
-    const response = getImage(inputValue);
-    console.log(response);
+  const handleSearch = async () => {
+    const { data } = await getImage(inputValue);
   };
 
   return (
