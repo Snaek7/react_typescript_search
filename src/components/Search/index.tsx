@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Container, SearchButton, SearchInput } from './styles';
 import { getImage } from '../../../src/api/index';
-import ApiResponse from '../../interfaces/ApiResponse';
 
 export const Search = () => {
   const [inputValue, setinputValue] = useState('');

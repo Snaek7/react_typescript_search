@@ -4,7 +4,7 @@ interface ApiResponse {
   hits: Hits[];
 }
 
-interface Hits {
+export interface Hits {
   id: number;
   pageURL: string;
   type: string;
