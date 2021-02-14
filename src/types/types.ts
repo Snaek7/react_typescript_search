@@ -1,10 +1,12 @@
-interface ApiResponse {
+import { Dispatch, SetStateAction } from 'react';
+
+export type ApiResponse = {
   total: number;
   totalHits: number;
   hits: Hits[];
-}
+};
 
-export interface Hits {
+export type Hits = {
   id: number;
   pageURL: string;
   type: string;
@@ -27,6 +29,9 @@ export interface Hits {
   user_id: number;
   user: string;
   userImageURL: string;
-}
+};
 
-export default ApiResponse;
+export type DataContextState = {
+  data: Hits[];
+  setData: Dispatch<SetStateAction<Hits[]>>;
+};

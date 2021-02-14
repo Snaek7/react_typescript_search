@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from 'axios';
-import ApiResponse from '../interfaces/ApiResponse';
+import ApiResponse from '../types/types';
 
 export const getImage = (term: string): Promise<AxiosResponse<ApiResponse>> => {
   return axios.get(

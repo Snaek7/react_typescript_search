@@ -1,11 +1,17 @@
 import React from 'react';
-import { Hits } from '../../interfaces/ApiResponse';
-import { CardImg } from './styles';
+import { Hits } from '../../types/types';
+import { CardContainer, CardImg } from './styles';
 
-export const Card = (props: Hits) => {
+type CardProps = {
+  imageData: Hits;
+};
+
+const Card = (props: CardProps) => {
   return (
-    <div>
-      <CardImg src={props.webformatURL} />
-    </div>
+    <CardContainer>
+      <CardImg src={props.imageData.webformatURL} />
+    </CardContainer>
   );
 };
+
+export default Card;
