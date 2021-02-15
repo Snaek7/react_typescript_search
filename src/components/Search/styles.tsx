@@ -7,7 +7,6 @@ export const Container = styled.div`
 `;
 
 export const SearchInput = styled.input`
-  box-sizing: border-box;
   height: 30px;
   border: 1px solid black;
   border-right: none;
