@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const Container = styled.div`
+  padding: 16px;
+`;
+
 export const ImagesWrapper = styled.div`
   display: grid;
   grid-gap: 10px;

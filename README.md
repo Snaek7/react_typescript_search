@@ -1,3 +1,3 @@
 # App de buscas
 
-Aplicativo para estudos, utilizando Typescript, Context Api, Es6, Unit Tests
+Aplicativo para estudos, utilizando Typescript, Context Api, Es6, Unit Tests, Styled Components, Grid layout
