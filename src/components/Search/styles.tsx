@@ -7,7 +7,7 @@ export const Container = styled.div`
 `;
 
 export const SearchInput = styled.input`
-  height: 30px;
+  height: 35px;
   border: 1px solid black;
   border-right: none;
   width: 100%;
@@ -17,10 +17,11 @@ export const SearchInput = styled.input`
 `;
 
 export const SearchButton = styled.button`
-  height: 30px;
+  height: 35px;
   background: #4a919e;
   color: #fff;
   border: 1px solid black;
   border-left: none;
   outline: none;
+  padding: 0px 10px;
 `;

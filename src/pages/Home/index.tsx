@@ -11,8 +11,8 @@ const Home = () => {
     <div>
       <Search />
       <ImagesWrapper>
-        {data.map((image) => (
-          <Card imageData={image} />
+        {data.map((image, index) => (
+          <Card key={index} imageData={image} />
         ))}
       </ImagesWrapper>
     </div>

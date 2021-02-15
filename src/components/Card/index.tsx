@@ -6,6 +6,7 @@ import {
   ImgWrapper,
   Info,
   InfosWrapper,
+  Tag,
   Title,
 } from './styles';
 
@@ -13,23 +14,29 @@ type CardProps = {
   imageData: Hits;
 };
 
-const Card = (props: CardProps) => {
+const Card = ({ imageData }: CardProps) => {
+  const tags = imageData.tags.split(',');
+
   return (
     <CardContainer>
       <ImgWrapper>
-        <CardImg src={props.imageData.webformatURL} />
+        <CardImg src={imageData.webformatURL} />
       </ImgWrapper>
       <InfosWrapper>
-        <Title>{'Photo by ' + props.imageData.user}</Title>
+        <Title>{'Photo by ' + imageData.user}</Title>
         <Info>
-          Views: <span>{props.imageData.views}</span>
+          Views: <span>{imageData.views}</span>
         </Info>
         <Info>
-          Likes: <span>{props.imageData.likes}</span>
+          Likes: <span>{imageData.likes}</span>
         </Info>
         <Info>
-          Downloads: <span>{props.imageData.downloads}</span>
+          Downloads: <span>{imageData.downloads}</span>
         </Info>
+
+        {tags.map((tag) => (
+          <Tag>#{tag.trim() + '  '}</Tag>
+        ))}
       </InfosWrapper>
     </CardContainer>
   );

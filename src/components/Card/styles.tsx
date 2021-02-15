@@ -34,3 +34,14 @@ export const Info = styled.h4`
     font-weight: lighter;
   }
 `;
+
+export const Tag = styled.p`
+  background-color: #4a919e;
+  color: #fff;
+  margin-right: 5px;
+  border-radius: 2px;
+  padding: 4px;
+  font-size: 14px;
+  margin-top: 5px;
+  display: inline-block;
+`;
