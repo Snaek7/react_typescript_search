@@ -1,9 +1,20 @@
-import React, { createContext, useState, FC } from 'react';
-import { DataContextState, Hits } from '../../types/types';
+import { off } from 'process';
+import React, { createContext, useState, FC, useEffect } from 'react';
+import { getImage } from '../../api';
+import { ApiResponse, DataContextState, Hits } from '../../types/types';
 
 const contextDefaultValues: DataContextState = {
-  data: [],
+  data: {
+    total: 0,
+    totalHits: 0,
+    hits: [],
+  },
   setData: () => {},
+  handleData: () => {},
+  pageNumber: 1,
+  setpageNumber: () => {},
+  inputValue: '',
+  setInputValue: () => {},
 };
 
 export const DataContext = createContext<DataContextState>(
@@ -11,13 +22,30 @@ export const DataContext = createContext<DataContextState>(
 );
 
 const DataProvider: FC = ({ children }) => {
-  const [data, setData] = useState<Hits[]>([]);
+  const [data, setData] = useState<ApiResponse>({
+    total: 0,
+    totalHits: 0,
+    hits: [],
+  });
+
+  const [pageNumber, setpageNumber] = useState(1);
+  const [inputValue, setInputValue] = useState('');
+
+  const handleData = async (inputValue: string, page: number) => {
+    let { data } = await getImage(inputValue, page);
+    setData(data);
+  };
 
   return (
     <DataContext.Provider
       value={{
         data,
         setData,
+        handleData,
+        pageNumber,
+        setpageNumber,
+        inputValue,
+        setInputValue,
       }}
     >
       {children}

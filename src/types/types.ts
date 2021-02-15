@@ -32,6 +32,11 @@ export type Hits = {
 };
 
 export type DataContextState = {
-  data: Hits[];
-  setData: Dispatch<SetStateAction<Hits[]>>;
+  data: ApiResponse;
+  setData: Dispatch<SetStateAction<ApiResponse>>;
+  handleData: any;
+  pageNumber: number;
+  setpageNumber: Dispatch<SetStateAction<number>>;
+  inputValue: string;
+  setInputValue: Dispatch<SetStateAction<string>>;
 };
