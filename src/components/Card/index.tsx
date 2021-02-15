@@ -1,6 +1,13 @@
 import React from 'react';
 import { Hits } from '../../types/types';
-import { CardContainer, CardImg, ImgWrapper, InfosWrapper } from './styles';
+import {
+  CardContainer,
+  CardImg,
+  ImgWrapper,
+  Info,
+  InfosWrapper,
+  Title,
+} from './styles';
 
 type CardProps = {
   imageData: Hits;
@@ -13,10 +20,16 @@ const Card = (props: CardProps) => {
         <CardImg src={props.imageData.webformatURL} />
       </ImgWrapper>
       <InfosWrapper>
-        <h3>{'Photo by ' + props.imageData.user}</h3>
-        <h4>Views: {props.imageData.views}</h4>
-        <h4>Likes: {props.imageData.likes}</h4>
-        <h4>Downloads: {props.imageData.downloads}</h4>
+        <Title>{'Photo by ' + props.imageData.user}</Title>
+        <Info>
+          Views: <span>{props.imageData.views}</span>
+        </Info>
+        <Info>
+          Likes: <span>{props.imageData.likes}</span>
+        </Info>
+        <Info>
+          Downloads: <span>{props.imageData.downloads}</span>
+        </Info>
       </InfosWrapper>
     </CardContainer>
   );

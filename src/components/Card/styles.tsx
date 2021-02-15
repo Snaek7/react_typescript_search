@@ -19,5 +19,18 @@ export const ImgWrapper = styled.div`
 `;
 
 export const InfosWrapper = styled.div`
-  padding: 6px;
+  padding: 10px;
+`;
+
+export const Title = styled.h3`
+  color: #f57d7c;
+  margin-bottom: 8px;
+`;
+
+export const Info = styled.h4`
+  margin-bottom: 8px;
+
+  span {
+    font-weight: lighter;
+  }
 `;
