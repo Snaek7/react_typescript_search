@@ -14,6 +14,8 @@ export const SearchInput = styled.input`
   &:focus {
     outline: none;
   }
+  padding: 0px 10px;
+  font-size: 14px;
 `;
 
 export const SearchButton = styled.button`
@@ -24,4 +26,10 @@ export const SearchButton = styled.button`
   border-left: none;
   outline: none;
   padding: 0px 10px;
+  font-size: 14px;
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
 `;

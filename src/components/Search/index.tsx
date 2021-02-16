@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { Container, SearchButton, SearchInput } from './styles';
 import { DataContext } from '../../context/Data';
 
@@ -13,7 +13,15 @@ export const Search = () => {
           setInputValue(event.target.value)
         }
       />
-      <SearchButton onClick={() => handleData(inputValue, 1)}>
+      <SearchButton
+        disabled={!inputValue}
+        onClick={() => {
+          if (!inputValue) {
+            return;
+          }
+          handleData(inputValue, 1);
+        }}
+      >
         Buscar
       </SearchButton>
     </Container>

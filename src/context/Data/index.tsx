@@ -1,7 +1,6 @@
-import { off } from 'process';
-import React, { createContext, useState, FC, useEffect } from 'react';
+import React, { createContext, useState, FC } from 'react';
 import { getImage } from '../../api';
-import { ApiResponse, DataContextState, Hits } from '../../types/types';
+import { ApiResponse, DataContextState } from '../../types/types';
 
 const contextDefaultValues: DataContextState = {
   data: {

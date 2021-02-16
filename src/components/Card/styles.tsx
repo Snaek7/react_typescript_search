@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const CardContainer = styled.div`
   border-radius: 4px;
   max-height: 500px;
-
+  cursor: pointer;
   overflow: hidden;
-  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  box-shadow: 0 8px 8px 0 rgb(1 1 1 / 20%);
 `;
 
 export const CardImg = styled.img`
@@ -20,6 +20,7 @@ export const ImgWrapper = styled.div`
 
 export const InfosWrapper = styled.div`
   padding: 10px;
+  background: #fff;
 `;
 
 export const Title = styled.h3`
