@@ -14,6 +14,8 @@ export const Search = () => {
         }
       />
       <SearchButton
+        data-testid='search-button'
+        aria-label='search-button'
         disabled={!inputValue}
         onClick={() => {
           if (!inputValue) {

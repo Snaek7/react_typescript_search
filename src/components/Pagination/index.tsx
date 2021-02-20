@@ -57,7 +57,6 @@ export const Pagination = ({ limit, total }: PaginationProps) => {
       <Button
         hidden={data.total === 0}
         onClick={() => {
-          console.log(data.hits == []);
           handleData(inputValue, current + 1);
           onPageChange(current + 1);
         }}

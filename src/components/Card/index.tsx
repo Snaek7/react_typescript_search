@@ -34,8 +34,8 @@ const Card = ({ imageData }: CardProps) => {
           Downloads: <span>{imageData.downloads}</span>
         </Info>
 
-        {tags.map((tag) => (
-          <Tag>#{tag.trim() + '  '}</Tag>
+        {tags.map((tag, index) => (
+          <Tag key={index}>#{tag.trim() + '  '}</Tag>
         ))}
       </InfosWrapper>
     </CardContainer>
