@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import Card from '../../components/Card';
+import { Header } from '../../components/Header';
 import Pagination from '../../components/Pagination';
 import { Search } from '../../components/Search';
 import { DataContext } from '../../context/Data';
@@ -10,6 +11,7 @@ const Home = () => {
 
   return (
     <Container>
+      <Header />
       <Search />
       <ImagesWrapper>
         {data?.hits.map((image, index) => (

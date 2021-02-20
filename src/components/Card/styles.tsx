@@ -24,7 +24,7 @@ export const InfosWrapper = styled.div`
 `;
 
 export const Title = styled.h3`
-  color: #f57d7c;
+  color: var(--color-secondary);
   margin-bottom: 8px;
 `;
 
@@ -37,7 +37,7 @@ export const Info = styled.h4`
 `;
 
 export const Tag = styled.p`
-  background-color: #4a919e;
+  background-color: var(--color-primary);
   color: #fff;
   margin-right: 5px;
   border-radius: 2px;

@@ -20,7 +20,7 @@ export const SearchInput = styled.input`
 
 export const SearchButton = styled.button`
   height: 35px;
-  background: #4a919e;
+  background: var(--color-primary);
   color: #fff;
   border: 1px solid black;
   border-left: none;
